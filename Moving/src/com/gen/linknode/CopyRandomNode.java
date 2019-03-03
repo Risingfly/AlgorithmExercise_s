@@ -1,7 +1,6 @@
 package com.gen.linknode;
 
 import java.util.HashMap;
-import java.util.Hashtable;
 
 /**
  * 复制含有随机指针节点的链表
