@@ -1,5 +1,8 @@
 package com.gen.test;
 
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class RunTest {
     public static void main(String[] args) {
         Rice rice = new Rice("good");
