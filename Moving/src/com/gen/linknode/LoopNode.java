@@ -1,6 +1,8 @@
 package com.gen.linknode;
 
 
+import java.util.Scanner;
+
 /**
  * 如何判断一个链表有环，如果有，则返回第一个进入环的节点，如果没有则返回null
  * 解法：设置快慢两个指针，快指针每次移动两步，慢指针移动一步，若无环，则快指针一定
@@ -10,6 +12,30 @@ package com.gen.linknode;
  */
 public class LoopNode {
 
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String str = in.nextLine();
+        String[] strs = str.split(",");
+        if (strs.length > 1000){
+            return;
+        }
+
+    }
+    public static boolean isLoopNode(String[] strs){
+        if (strs == null || strs.length < 3 || strs.length > 1000){
+            return false;
+        }
+        int slow = 0;
+        int fast = 2;
+        while (slow != fast && fast < strs.length){
+            if (strs[slow].equals(strs[fast])){
+                return true;
+            }
+            slow++;
+            fast += 2;
+        }
+        return false;
+    }
     public static Node getLoopNode(Node head){
         if (head == null || head.next == null || head.next.next == null){
             return head;
