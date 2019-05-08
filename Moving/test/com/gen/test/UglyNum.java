@@ -27,5 +27,12 @@ public class UglyNum {
         }
         return list.get(list.size() - 1);
     }
-
+    public int Add(int num1,int num2) {
+        int tmp = 0;
+        while (num2 != 0){
+            tmp = num1 ^ num2;
+            num2 = num1 & num2 << 1;
+            num1 = tmp;
+        }
+    }
 }
