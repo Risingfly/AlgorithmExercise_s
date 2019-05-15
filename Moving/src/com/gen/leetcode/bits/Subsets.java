@@ -1,4 +1,4 @@
-package com.gen.leetcode;
+package com.gen.leetcode.bits;
 
 import java.util.ArrayList;
 import java.util.List;

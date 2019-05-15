@@ -1,4 +1,4 @@
-package com.gen.leetcode;
+package com.gen.leetcode.bits;
 
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {

@@ -1,4 +1,4 @@
-package com.gen.leetcode;
+package com.gen.leetcode.bits;
 
 /**
  * 问题：136

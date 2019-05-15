@@ -1,10 +1,29 @@
-package com.gen.leetcode;
+package com.gen.leetcode.bits;
 
 /**
  * 问题:260
  * @author Genge
  */
 public class SingleNumberIII{
+    public int[] singleNumber2(int[] nums){
+        int tmp = 0;
+        for (int i = 0; i < nums.length; i++) {
+            tmp ^= nums[i];
+        }
+        int numHasOne = 0;
+//      取反再加1再与原数相与即可得到最右边包含1的位置的数 (只有最右边有1,其他位为0)
+        int rightOne = tmp & (~tmp + 1);
+        for (int num: nums) {
+            if ((num & rightOne) != 0){
+                numHasOne ^= num;
+            }
+        }
+        int[] res = new int[2];
+        res[0] = numHasOne;
+        res[1] = numHasOne ^ tmp;
+        return res;
+    }
+
     public int[] singleNumber(int[] nums){
         int tmp = 0;
         for (int i = 0; i < nums.length; i++) {
