@@ -30,7 +30,7 @@ public class NiuKeTest {
 //        for (int i = 0; i < n; i++) {
 //            arr[i] = sc.nextInt();
 //        }
-//        System.out.println(Arrays.toString(arr));
+//        System.out.println(arrays.toString(arr));
 //        for (int i = 1; i <= 20 ; i++) {
 //            for (int j = 0; j < arr.length; j++) {
 //                i = arr[j] *
