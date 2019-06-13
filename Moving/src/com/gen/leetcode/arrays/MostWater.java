@@ -19,6 +19,7 @@ public class MostWater {
                 right--;
             }
         }
+
         return max;
     }
 }
