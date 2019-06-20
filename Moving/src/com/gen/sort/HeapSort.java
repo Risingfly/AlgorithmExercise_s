@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * 问题：堆排序
  * 最好最坏平均情况均为O（nlog(n)）,空间复杂度为O（1），使用递归则为O（log(n)）
+ * 不稳定排序
  * @author Genge
  */
 public class HeapSort {
@@ -59,7 +60,7 @@ public class HeapSort {
         int right = 2 * parent + 2;
 //        save current location
         int tmp = parent;
-//        小标必须为非叶子节点
+//        下标必须为非叶子节点
         if (parent < size / 2){
             if (left < size && arr[tmp] < arr[left]){
                 tmp = left;
