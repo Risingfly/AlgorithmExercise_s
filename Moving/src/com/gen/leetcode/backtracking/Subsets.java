@@ -21,7 +21,7 @@ public class Subsets {
             return;
         }
         res.add(new ArrayList<>(tmp));
-        System.out.println("start="+start+"-----tmp="+tmp.toString());
+        System.out.println("res = "+tmp.toString());
         for (int i = start; i < nums.length; i++) {
             tmp.add(nums[i]);
             backtrack(res,tmp,nums,i + 1);
