@@ -26,7 +26,7 @@ public class PhoneNumber {
     }
     public List<String> letterCombinations2(String digits) {
         List<String> result = new ArrayList<>();
-        String[][] map={{},{},{"a","c","b"},{"d","e","f"},{"g","h","i"},{"j","k","l"},{"m","n","o"},{"p","q","r","s"},,{"t","u","v"},{"w","x","y","z"}};
+        String[][] map={{},{},{"a","c","b"},{"d","e","f"},{"g","h","i"},{"j","k","l"},{"m","n","o"},{"p","q","r","s"},{"t","u","v"},{"w","x","y","z"}};
         String single = "";
         if (digits == null || digits.length() == 0){
             return result;
