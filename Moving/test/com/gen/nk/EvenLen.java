@@ -1,5 +1,6 @@
 package com.gen.nk;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EvenLen {
