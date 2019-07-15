@@ -9,6 +9,51 @@ import java.util.Arrays;
  * @author Genge
  */
 public class LongestIncreasingSubsequence {
+    /**
+     * 代码最简洁
+     * @param nums
+     * @return
+     */
+    public int lengthOfLIS(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        int n = nums.length;
+        int[] dp = new int[n];
+        // dp[0] = 1;
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < n; i++) {
+            dp[i] = 1;
+            for (int j = 0; j < i; j++) {
+                if (nums[j] < nums[i]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
+            }
+            if (dp[i] > max) {
+                max = dp[i];
+            }
+        }
+        return max;
+    }
+    public int getLIS2(int[] A, int n){
+        if (A == null || n <= 0){
+            return 0;
+        }
+        int[] dp = new int[n];
+        dp[0] = 1;
+        int max = Integer.MIN_VALUE;
+        for (int i = 1; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                if (A[j] < A[i]){
+                    dp[i] = Math.max(dp[i],dp[j] + 1);
+                }
+            }
+            if (dp[i] > max){
+                max = dp[i];
+            }
+        }
+        return max;
+    }
     public int getLIS(int[] A, int n) {
         if (A == null || n <= 0){
             return 0;
@@ -21,7 +66,7 @@ public class LongestIncreasingSubsequence {
         for (int i = 1; i < n; i++) {
             //所有前面比A[i]小的数中，选择以某个数A[x]结尾的dp[x]最大的数，做倒数第二个数；
             int max = -1;
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < i; j++) {
                 if (A[j] < A[i] && dp[j] > max){
                     max = dp[j];
                 }
@@ -37,25 +82,4 @@ public class LongestIncreasingSubsequence {
         return res;
     }
 
-    public int getLIS2(int[] A, int n) {
-        if (n <= 0){
-            return -1;
-        }
-        int[] dp = new int[n];
-        dp[0] = 1;
-        int max = 1;
-        for (int i = 1;i < n;i++){
-            dp[i] = 0;
-            for (int j = 0;j < i;j++){
-                if (A[i] > A[j] && dp[j] > dp[i]){
-                    dp[i] = dp[j];
-                }
-            }
-            dp[i] += 1;
-            if (dp[i] > max){
-                max = dp[i];
-            }
-        }
-        return max;
-    }
 }
