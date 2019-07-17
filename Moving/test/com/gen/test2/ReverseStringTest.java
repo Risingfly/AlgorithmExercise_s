@@ -4,7 +4,9 @@ public class ReverseStringTest {
     public static void main(String[] args) {
         String str = "  I am student  ";
         reverseSentence(str);
-
+        StringBuilder sb = new StringBuilder();
+        sb.append("nb");
+        System.out.println("res="+sb+"..");
 //        System.out.println(reverseSentence(str));
     }
     public static char[] reverse(char[] chars, int l, int r){
