@@ -35,19 +35,21 @@ public class ProConTest2 {
     public static void main(String[] args) {
         ProConTest2 proConTest2 = new ProConTest2();
         Con1 con1 = new Con1(proConTest2);
-        Con1 con2 = new Con1(proConTest2);
-        Con1 con3 = new Con1(proConTest2);
-        Con1 con4 = new Con1(proConTest2);
+//        Con1 con2 = new Con1(proConTest2);
+//        Con1 con3 = new Con1(proConTest2);
+//        Con1 con4 = new Con1(proConTest2);
         Pro1 pro1 = new Pro1(proConTest2);
-        Pro1 pro2 = new Pro1(proConTest2);
-        Pro1 pro3 = new Pro1(proConTest2);
         con1.start();
-        con2.start();
-        con3.start();
-        con4.start();
         pro1.start();
-//        pro2.start();
-//        pro3.start();
+//        Pro1 pro2 = new Pro1(proConTest2);
+//        Pro1 pro3 = new Pro1(proConTest2);
+//        con1.start();
+//        con2.start();
+//        con3.start();
+//        con4.start();
+//        pro1.start();
+////        pro2.start();
+////        pro3.start();
     }
 }
 class Con1 extends Thread{

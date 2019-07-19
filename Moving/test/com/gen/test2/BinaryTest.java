@@ -1,5 +1,6 @@
 package com.gen.test2;
 
+
 public class BinaryTest {
     public int GetNumberOfK(int [] array , int k) {
         if (array == null || array.length == 0){
