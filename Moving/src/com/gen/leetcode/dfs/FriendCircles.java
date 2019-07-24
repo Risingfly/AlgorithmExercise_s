@@ -1,10 +1,13 @@
 package com.gen.leetcode.dfs;
 
+
+
 /**
  *问题:547
  * @author Genge
  */
 public class FriendCircles {
+
     private static int num = 0;
     public static void main(String[] args) {
         int[][] arr ={{1,0,0,1},{0,1,1,0},{0,1,1,1},{1,0,1,1}};
