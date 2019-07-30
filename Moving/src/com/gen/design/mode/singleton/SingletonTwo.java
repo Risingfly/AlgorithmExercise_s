@@ -1,4 +1,4 @@
-package com.gen.design.mode;
+package com.gen.design.mode.singleton;
 
 /***
  * 单例模式：静态内部类法

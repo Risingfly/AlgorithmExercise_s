@@ -1,4 +1,4 @@
-package com.gen.design.mode;
+package com.gen.design.mode.singleton;
 
 /**
  * 单例设计模式一：双重检查锁
