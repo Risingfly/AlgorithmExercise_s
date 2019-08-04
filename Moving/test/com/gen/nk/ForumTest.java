@@ -5,6 +5,8 @@ import com.gen.leetcode.tree.TreeNode;
 import java.util.*;
 
 public class ForumTest {
+
+
     public int nodeNums(TreeNode node,int n){
         if (node == null){
             return 0;
