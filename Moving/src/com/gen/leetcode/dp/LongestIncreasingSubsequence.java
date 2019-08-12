@@ -20,7 +20,6 @@ public class LongestIncreasingSubsequence {
         }
         int n = nums.length;
         int[] dp = new int[n];
-        // dp[0] = 1;
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
             dp[i] = 1;
