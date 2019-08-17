@@ -17,6 +17,7 @@ public class AppleBox {
     }
 
     public synchronized void decrease(){
+        System.out.println("fuck");
         while (count == 0){
             try {
                 wait();

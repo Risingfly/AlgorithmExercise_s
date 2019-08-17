@@ -6,7 +6,7 @@ public class CountdownLatchExample {
     public static void main(String[] args)throws Exception {
         final int count = 2;
         CountDownLatch countDownLatch = new CountDownLatch(count);
-        CyclicBarrier barrier = new CyclicBarrier(3);
+        CyclicBarrier barrier = new CyclicBarrier(4);
         Thread t1 = new Thread(new T(barrier),"t1");
         Thread t2 = new Thread(new T(barrier),"t2");
         Thread t3 = new Thread(new P(barrier),"t3");
