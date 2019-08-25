@@ -26,7 +26,7 @@ public class Singleton {
                      * 1. memory = allocate() ;//分配对象的内存空间
                      2. ctorInstance(memory) ;//初始化对象
                      3. instance = memory ;//引用指向内存空间
-                     1.3可能发生重排==============
+                     2.3可能发生重排==============
                      =============================
                      1. memory = allocate() ;//分配对象的内存空间
                      3. instance = memory ;//引用指向内存空间
