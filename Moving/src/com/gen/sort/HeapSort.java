@@ -10,7 +10,7 @@ import java.util.Arrays;
  */
 public class HeapSort {
     public static void main(String[] args) {
-        int[] arr = {9,6,12,32,23,11,2,100,85};
+        int[] arr = {9,6,12,32,23,11};
         System.out.println("排序前："+ Arrays.toString(arr));
         heapSort(arr);
         System.out.println("排序后："+Arrays.toString(arr));
@@ -44,7 +44,7 @@ public class HeapSort {
             return;
         }
 //        从第一个非叶子节点进行调整建堆
-        for (int i = arr.length/2; i >= 0 ; i--) {
+        for (int i = arr.length/2 - 1; i >= 0 ; i--) {
             adjustHeap(arr,i,arr.length);
         }
     }
