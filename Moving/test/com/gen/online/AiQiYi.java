@@ -3,6 +3,72 @@ package com.gen.online;
 import java.util.Scanner;
 
 public class AiQiYi {
+    private static boolean same(int[] person,int l,int n) {
+        for (int i=0; i<l; i++) {
+            if(person[i] == n) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void play(int playerNum, int step ) {
+        int[] person = new int[playerNum];
+        int counter = 1;
+        while (true) {
+            if (counter > playerNum * step) {
+                break;
+            }
+            for (int i = 1; i <= playerNum; i++) {
+                while (true) {
+                    if (same(person, playerNum, i) == false) {
+                        break;
+                    } else {
+                        i = i + 1;
+                    }
+                }
+                if (i > playerNum) {
+                    break;
+                }
+                if (counter % step == 0) {
+                    System.out.println(i + " ");
+                    person[counter / step - 1] = i;
+                }
+                counter += 1;
+            }
+        }
+        System.out.println();
+    }
+    public static int solution(int[] A) {
+        int jumps = 0, curEnd = 0, curFarthest = 0;
+        for (int i = 0; i < A.length - 1; i++) {
+            curFarthest = Math.max(curFarthest, i + A[i]);
+            if (i == curEnd) {
+                jumps++;
+                curEnd = curFarthest;
+
+                if (curEnd >= A.length - 1) {
+                    break;
+                }
+            }
+        }
+        return jumps;
+    }
+    public static int solution1(int[] A) {
+        int jumps = 0, curEnd = 0, curFarthest = 0;
+        for (int i = 0; i < A.length - 1; i++) {
+            curFarthest = Math.max(curFarthest, i + A[i]);
+            if (i == curEnd) {
+                jumps++;
+                curEnd = curFarthest;
+
+                if (curEnd >= A.length - 1) {
+                    break;
+                }
+            }
+        }
+        return jumps;
+    }
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
         while (read.hasNext()){
